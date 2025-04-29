@@ -4,12 +4,13 @@
  */
 {
 	"$schema": "node_modules/wrangler/config-schema.json",
-	"name": "global-image-cache",
+	"name": "fcc-image-cache",
 	"main": "src/index.ts",
 	"compatibility_date": "2025-04-29",
 	"observability": {
-		"enabled": true
-	}
+		"enabled": true,
+		"head_sampling_rate": 1
+	},
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
@@ -22,12 +23,18 @@
 	 * databases, object storage, AI inference, real-time communication and more.
 	 * https://developers.cloudflare.com/workers/runtime-apis/bindings/
 	 */
+	"r2_buckets": [
+		{
+			"binding": "FCC_BUCKET",
+			"bucket_name": "FCC_BUCKET"
+		}
+	]
 
 	/**
 	 * Environment Variables
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
 	 */
-	// "vars": { "MY_VARIABLE": "production_value" },
+	// "vars": { "UPSTREAM_URL": "example.com" }
 	/**
 	 * Note: Use secrets to store sensitive data.
 	 * https://developers.cloudflare.com/workers/configuration/secrets/
