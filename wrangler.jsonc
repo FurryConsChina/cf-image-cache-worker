@@ -11,6 +11,7 @@
 		"enabled": true,
 		"head_sampling_rate": 1
 	},
+	"keep_vars": true,
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
