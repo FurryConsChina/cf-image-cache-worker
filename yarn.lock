@@ -1077,6 +1077,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cf-image-cache-worker@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "cf-image-cache-worker@workspace:."
+  dependencies:
+    "@cloudflare/vitest-pool-workers": "npm:^0.8.19"
+    typescript: "npm:^5.5.2"
+    vitest: "npm:~3.0.7"
+    wrangler: "npm:^4.13.2"
+  languageName: unknown
+  linkType: soft
+
 "chai@npm:^5.2.0":
   version: 5.2.0
   resolution: "chai@npm:5.2.0"
@@ -1554,17 +1565,6 @@ __metadata:
   checksum: 10c0/19a9759ea77b8e3ca0a43c2f07ecddc2ad46216b786bb8f993c445aee80d345925a21e5280c7b7c6c59e860a0154b84e4b2b60321fea92cd3c56b4a7489f160e
   languageName: node
   linkType: hard
-
-"global-image-cache@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "global-image-cache@workspace:."
-  dependencies:
-    "@cloudflare/vitest-pool-workers": "npm:^0.8.19"
-    typescript: "npm:^5.5.2"
-    vitest: "npm:~3.0.7"
-    wrangler: "npm:^4.13.2"
-  languageName: unknown
-  linkType: soft
 
 "graceful-fs@npm:^4.2.6":
   version: 4.2.11
