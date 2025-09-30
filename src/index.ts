@@ -1,6 +1,8 @@
 import { env } from 'cloudflare:workers';
 
 const UPSTREAM_URL = env.UPSTREAM_URL;
+const HEADER_NAME = env.HEADER_NAME;
+const HEADER_VALUE = env.HEADER_VALUE;
 
 const WHITELISTED_PATHS = ['/assets/', '/banner', '/fec-event', '/logo', '/organizations/'];
 
@@ -24,7 +26,7 @@ async function fetchFromUpstream(request: Request<unknown, IncomingRequestCfProp
 		method: request.method,
 		headers: {
 			...request.headers,
-			host: upstreamUrl.host,
+			[HEADER_NAME]: HEADER_VALUE,
 		},
 	});
 	return await fetch(upstreamRequest);

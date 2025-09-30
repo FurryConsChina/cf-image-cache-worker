@@ -4,6 +4,8 @@
 declare namespace Cloudflare {
 	interface Env {
 		UPSTREAM_URL: string;
+		HEADER_NAME: string;
+		HEADER_VALUE: string;
 		FCC_BUCKET: R2Bucket;
 	}
 }
