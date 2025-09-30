@@ -22,7 +22,10 @@ async function fetchFromUpstream(request: Request<unknown, IncomingRequestCfProp
 
 	const upstreamRequest = new Request(upstreamUrl.toString(), {
 		method: request.method,
-		headers: request.headers,
+		headers: {
+			host: upstreamUrl.host,
+			...request.headers,
+		},
 	});
 	return await fetch(upstreamRequest);
 }
